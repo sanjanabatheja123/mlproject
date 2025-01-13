@@ -40,7 +40,6 @@ class DataIngestionConfig:
 
 class DataIngestion:
     def __init__(self):
-
         # consists of 3 path values
         self.ingestion_config=DataIngestionConfig()
         # as soon as this class is called, 3 paths will be saved in path var
@@ -56,7 +55,7 @@ class DataIngestion:
         try:
             df=pd.read_csv('notebook\data\stud.csv')
             logging.info('Read the dataset as df')
-
+            
             # os.makedirs = create folder with the help of 3 paths
             # os.path.dirname = get dir name wrt specific path 
             os.makedirs(os.path.dirname(self.ingestion_config.train_data_path),exist_ok=True)
